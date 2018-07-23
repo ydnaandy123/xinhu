@@ -1,6 +1,6 @@
 $(document).ready(function (e) {
   // console.log("page is loading now");
-  $(".navbar a, footer a[href='#main-body']").on('click', function (event) {
+  $(".navbar a, footer a[href='#main-body'], #landing-button-group a.btn").on('click', function (event) {
     console.log(this.hash)
     if (this.hash !== "") {
       event.preventDefault();
@@ -21,7 +21,7 @@ $(window).on('load', function (e) {
   animatedObjectCheck();
 })
 
-function animatedObjectCheck(){
+function animatedObjectCheck(){  
   var winTop = $(window).scrollTop();
   // Check all ready-to-appear elements
   $(".ready-to-appear").each(function () {

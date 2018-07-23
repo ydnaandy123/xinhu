@@ -1,14 +1,13 @@
-html, body {
-  height: 100%;
-  width: 100%;
+
+/* General */
+html, body { 
+  height: 100%; 
+  width: 100%; 
+  margin: 0; 
 }
 body {
+  min-height: 100%;  
   font-family: "Microsoft YaHei";
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  overflow-y: scroll;
-  position: relative;
 }
 .center-block {
   position: absolute;
@@ -16,80 +15,86 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-div:hover{
-  border-style: none;
-  border-width: 1px;
-}
 .div-title{
   text-align: center;
   font-size: 46px;
   font-family: 'Helvetica';
 }
+.div-hr{
+  height:2px;
+  border:none;
+  color:#333;
+  background-color:#333; 
+  width: 75%;
+}
+.background-div{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+span.text-zh{
+  font-weight: 400;
+  font-family: "Microsoft YaHei";
+}
 /* NavBar */
 #top-nav{
   background-color: rgba(0, 0, 0, 0.0);
   transition: 0.5s;
-  padding: 0px 1rem;
 }
 #top-nav:hover{
   background-color: rgba(0, 0, 0, 0.75);  
-}
-#top-nav i.fas{
-  padding-right: 3px;
 }
 #top-nav a.active {
   color: rgba(255,255,255,1.0);
   background-color: rgba(0, 0, 0, 0.45);  
 }
-.navbar-dark .navbar-nav .nav-link:hover {
-  /* Why selector has to be written like this */
+#top-nav .nav-link:hover {
   color: rgba(255,255,255,1.0);
 }
 #brand-img{
-  width: 40px;
+  width: 80px;
   height: 40px;
-}
-#brand-text{
-  font-family: "Palatino";
 }
 /* Landing */
 #landing-div{
   position: relative;
+  height: 100%;
   padding: 0px;
-  height: 100%;
 }
-#landing-carousel{
-  height: 100%;
+#landing-div .background-div{
+  background-color: rgba(255, 255, 255, 0.);
 }
 #landing-div .center-block{
-  margin-top: -150px;
   padding: 25px 10px;
-  color: white;
-  font-size: 48px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
-  background-color: rgba(0, 0, 0,0.2);
+  color: white;  
   border-radius: 15px;
+  background-color: rgba(0, 0, 0,0.6);  
+  font-family: "Microsoft YaHei";  
 }
-/* Home */
-#home-parallax{
-  height: 100%;
+#landing-text-title{
+  cursor: default;
 }
-#home-parallax .center-block{
-  color: white;
-  font-size: 48px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 25px 10px;
-  background-color: rgba(0, 0, 0,0.6);
-  border-radius: 15px;
+#landing-zh{
+  margin-bottom: 16px;
+  font-size: 50px;
+  letter-spacing: 5px;
 }
-#home-parallax .a{
-  padding: 25px 0px;
+#landing-button-group{
+  margin-top: 30px;
+}
+#landing-button-group a.btn{
+  width: 95%;
 }
 /* Intro */
 #intro-div, #intro-grid{
   padding: 0 0;
+  position: relative;
 }
 #intro-div .grid-row{
+  position: relative;
+  margin: 0px;
   height: 320px;
 }
 .grid-frame{
@@ -105,24 +110,101 @@ div:hover{
 .grid-40{
   width: 40%;
 }
+#intro-grid{
+  font-family: "Microsoft YaHei";  
+  font-size: 24px;
+}
 #intro-text1{
-
 }
 #intro-text2{
   color:white;
 }
-#intro-text3{
-  
+#intro-text3{  
 }
 #intro-text4{
   color:white;
 }
 #intro-text5{
-  
 }
 /* About */
-#carouselExampleIndicators{
-  width: 100%;
+#about-div{
+  color: white;
+  position: relative;
+  background-image: url('src/aa9.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#about-div div.background-div{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#about-div hr.div-hr{
+  color:white;
+  background-color: white; 
+  margin-left: 0;
+  width: 60%;
+}
+#about-cores .card{
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+#about-cores .card .card-title{
+  font-size: 25px;
+}
+#about-div .blockquote-footer {
+  color: white;
+}
+/* Gallery */
+#gallery-div > .row > div{
+  padding: 0px;
+}
+#gallery-div .card{
+  border-style: none;
+}
+#gallery-div .card-title{
+  font-size: 30px;
+}
+#gallery-div .card-text{
+}
+/* Trophy */
+#trophy-div .container-fluid{
+  padding: 0;
+}
+#trophy-div .parallax-window {
+  height: 400px;
+}
+#trophy-div, #trophy-div .row {
+  padding: 0;
+  margin: 0;
+}
+#trophy-div .row > div{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* History */
+#history-div{
+  color:black;
+  background-image: url('src/aa12.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#history-div .background-div{
+  z-index: 0;
+}
+#history-div .foreground-div{
+  position: relative;
+  z-index: 1;
+}
+#history-div .foreground-div .container{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#history-div hr.div-hr{
+  color:black;
+  background-color: black; 
+  margin-left: 0;
 }
 /* Footer */
 #footer-div i{
@@ -132,8 +214,41 @@ div:hover{
 #copyright a:link, #copyright a:visited, #copyright a:hover, #copyright a:active {
   color: white;
 }
+
+@media (max-width: 992px) {   
+  .div-title{
+    font-size: 33px;
+  }
+  #landing-zh{
+    letter-spacing: 2px;
+    font-size: 38px;
+  }
+  #landing-eng{
+    font-size: 28px;
+  }
+  #intro-grid{
+    font-family: "Microsoft YaHei";  
+    font-size: 18px;
+  }
+ }
 @media (max-width: 768px) {   
   .div-title{
     font-size: 33px;
+  }
+  #landing-zh{
+    font-size: 24px;
+  }
+  #landing-eng{
+    font-size: 18px;
+  }
+  .grid-discard{
+    display: none;
+  }
+  .grid-stay{
+    width: 100%;
+  }
+  #intro-grid{
+    font-family: "Microsoft YaHei";  
+    font-size: 28px;
   }
  }
