@@ -180,7 +180,8 @@ span.text-zh{
   font-size: 40px;
 }
 #trophy-overview{
-  margin-top: -100px;
+  margin: -100px 0 0 0;
+  
 }
 #trophy-overview hr{
   margin-left: 0;
