@@ -9,6 +9,9 @@ body {
   min-height: 100%;  
   font-family: "Microsoft YaHei";
 }
+div{
+  position: relative;
+}
 .center-block {
   position: absolute;
   top: 50%;
@@ -114,21 +117,16 @@ span.text-zh{
   font-family: "Microsoft YaHei";  
   font-size: 24px;
 }
-#intro-text1{
-}
 #intro-text2{
   color:white;
-}
-#intro-text3{  
 }
 #intro-text4{
   color:white;
 }
-#intro-text5{
-}
 /* About */
 #about-div{
   color: white;
+  text-shadow: 0 0 5px black;
   position: relative;
   background-image: url('src/aa9.jpg');
   background-position: center;
@@ -136,7 +134,7 @@ span.text-zh{
   background-size: cover;
 }
 #about-div div.background-div{
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #about-div hr.div-hr{
   color:white;
@@ -164,23 +162,36 @@ span.text-zh{
 #gallery-div .card-title{
   font-size: 30px;
 }
-#gallery-div .card-text{
-}
 /* Trophy */
+#trophy-div{
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 #trophy-div .container-fluid{
   padding: 0;
 }
 #trophy-div .parallax-window {
   height: 400px;
 }
-#trophy-div, #trophy-div .row {
-  padding: 0;
-  margin: 0;
+#trophy-div .parallax-window > .center-block {
+  color: white;
+  text-shadow: 0 0 10px black;
+  letter-spacing: 5px;
+  font-size: 40px;
 }
-#trophy-div .row > div{
+#trophy-overview{
+  margin-top: -100px;
+}
+#trophy-overview hr{
+  margin-left: 0;
+}
+#trophy-overview > div{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#trophy-overview .card-body{
+  background-color: white;
 }
 /* History */
 #history-div{
@@ -247,8 +258,14 @@ span.text-zh{
   .grid-stay{
     width: 100%;
   }
+  #intro-text4{
+    font-size: 22px;
+  }
   #intro-grid{
     font-family: "Microsoft YaHei";  
     font-size: 28px;
+  }
+  #trophy-overview{
+    margin-top: -100px;
   }
  }
